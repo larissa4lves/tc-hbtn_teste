@@ -1,4 +1,3 @@
-
 public class OperacaoBasicaTeste {
 
 	public static boolean testar_sqrt() {
