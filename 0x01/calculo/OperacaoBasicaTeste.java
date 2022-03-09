@@ -1,41 +1,43 @@
 public class OperacaoBasicaTeste {
 
+	public static boolean testar_soma() {
+		return OperacaoBasica.somar(5, 3) == 8;
+				
+	}
+
+	public static boolean testar_subtracao() {
+		return OperacaoBasica.subtrair(5, 3) == 2;
+	}
+
+	public static boolean testar_multiplicacao() {
+		return OperacaoBasica.multiplicar(5, 3) == 15;
+	}
+
+	public static boolean testar_divisao() {
+		return OperacaoBasica.dividir(9, 3) == 3;
+	}
+
 	public static boolean testar_sqrt() {
-		if(OperacaoBasica.testar_sqrt(49) == 7) {
-			return true;
-		}
-		else {
+		
+		if(OperacaoBasica.sqrt(49) == 7) {
+		return true;
+		}else {
 			return false;
 		}
 	}
 
 	public static boolean testar_primo() {
-		if(OperacaoBasica.numero_primo(7) == "Numero valido, o numero e primo") {
-			return true;
-		}
-		else {
-			return false;
-		}
+	
+		return OperacaoBasica.numero_primo(7).equals("Numero válido, o numero é primo");
 	}
 
 	public static boolean testar_nao_primo() {
-		if(OperacaoBasica.numero_primo(4) == "Numero valido, mas o numero nao e primo") {
-			return true;
-		}
-		else{
-			return false;
-		}
+		
+		return !OperacaoBasica.numero_primo(4).equals("Número válido, mas não é primo");
 	}
 
 	public static boolean testar_primo_menor_zero() {
-		if(OperacaoBasica.numero_primo(-2) == "Numero invalido. Numero menor ou igual a 1 n�o e primo") {
-			return false;
-		}
-		else{
-			return true;
-		}
+		return !OperacaoBasica.numero_primo(-2).equals("Número invalido. Numero menor ou igual a 1 não é primo");
 	}
-	
-	
 
 }

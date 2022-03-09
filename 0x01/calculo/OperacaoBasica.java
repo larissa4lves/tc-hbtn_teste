@@ -1,22 +1,37 @@
-
 public class OperacaoBasica {
-
-	public static double testar_sqrt(int num) {
+	
+	public static double somar(double a, double b) {
+		return a + b;
+	}
+	
+	public static double subtrair(double a, double b) {
+		return a - b;
+	}
+	
+	public static double multiplicar(double a, double b) {
+		return a * b;
+	}
+	
+	public static double dividir(double a, double b) {
+		return a / b;
+	}
+	
+	public static double sqrt(double num) {
 		return Math.sqrt(num);
-
 	}
+	
+	public static String numero_primo (int num) {
+        if(num <= 1) {
+            return "NÃºmero invalido. Numero menor ou igual a 1 nÃ£o Ã© primo";
+        }
 
-	public static String numero_primo(int num) {
-		if (num <= 1) {
-			return "Numero invalido. Numero menor ou igual a 1 não e primo";
-		}
+        for (int i = 2; i < num; i++) {
+            if (num % i == 0) {
+                return "NÃºmero vÃ¡lido, mas o numero nÃ£o Ã© primo" ;
+            }
+        }
 
-		if (num % 2 == 0) {
-			return "Numero válido, mas o numero não é primo";
-		} else {
-			return "Numero válido, o numero é primo";
+        return "Numero vÃ¡lido, o numero Ã© primo";
+    }
 
-		}
-
-	}
 }
